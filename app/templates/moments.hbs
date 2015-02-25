@@ -1,0 +1,11 @@
+<h1>Memories</h1>
+
+<ul>
+  {{#each moment in model}}
+    <li>
+      <p><em>{{moment.content}}</em></p>
+      <p>{{moment.caption}}</p>
+      <span>Moment from {{moment.happenedAt}} at {{moment.location}}</span>
+    </li>
+  {{/each}}
+</ul>
