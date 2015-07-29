@@ -12,9 +12,11 @@
       {{textarea placeholder="Add a Place!" class="input-location" value=locationCopy autofocus='true'}}
     </div>
     <section class  = "moment-actions">
-      <!-- <div class="flash-message">
-        {{message-queue}}
-      </div> -->
+      <div class="flash-message">
+        {{#each flash in flashes.content}}
+          {{flash-message flash=flash}}
+        {{/each}}
+      </div>
       <button {{action 'newMoment'}}>Save Moment</button>
     </section>
   </div>
