@@ -1,3 +1,31 @@
+
+<section class='input'>
+  <div class="input-form">
+    {{textarea placeholder="Add a Moment!" class="input-content" property="stuff" value=contentCopy}}
+    <div class = 'caption'>
+      {{textarea placeholder="Add a Caption!" class="input-caption" value=captionCopy autofocus='true'}}
+    </div>
+    <div class= 'when'>
+      {{input type = "date" placeholder="Add a Day!" class="input-happenedAt" value=happenedAtCopy autofocus='true'}}
+    </div>
+    <div class= 'where'>
+      {{textarea placeholder="Add a Place!" class="input-location" value=locationCopy autofocus='true'}}
+    </div>
+    <section class  = "moment-actions">
+      <!-- <div class="flash-message">
+        {{message-queue}}
+      </div> -->
+      <button {{action 'newMoment'}}>Save Moment</button>
+    </section>
+  </div>
+  <div class='input-preview'>
+    <h2>{{contentCopy}}</h2>
+    {{captionCopy}}
+    {{happenedAtCopy}}
+    {{locationCopy}}
+  </div>
+</section>
+
 <ul>
   {{#each moment in model}}
     <li>
